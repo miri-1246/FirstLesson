@@ -1,0 +1,100 @@
+/* --- ORDER FORM --- */
+.order-section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.order-box {
+    background-color: #ffffff;
+    max-width: 650px;
+    width: 100%;
+    padding: 45px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.order-box h1 {
+    font-size: 34px;
+    color: #a55a6d;
+    margin-bottom: 10px;
+}
+
+.order-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: right;
+}
+
+.order-form label {
+    font-weight: 700;
+    color: #684438;
+    font-size: 15px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid #e8c9b3;
+    font-family: 'Heebo', sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #a55a6d;
+}
+
+.order-button {
+    margin-top: 20px;
+    background-color: #e8a0a0;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #a55a6d;
+}
+
+/* ===== רספונסיביות ===== */
+@media (max-width: 768px) {
+    .order-section {
+        padding: 50px 15px;
+    }
+
+    .order-box {
+        padding: 30px 20px;
+    }
+
+    .order-box h1 {
+        font-size: 28px;
+    }
+
+    .order-subtitle {
+        font-size: 16px;
+    }
+
+    .order-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

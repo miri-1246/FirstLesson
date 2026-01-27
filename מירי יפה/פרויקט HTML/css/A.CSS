@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo', sans-serif;
+    direction: rtl; 
+    text-align: right;
+    background-color: #F6E7E0; 
+    width: 100%; 
+    overflow-x: hidden; 
+}
+
+/* Header Styles */
+.main-header {
+    position: sticky;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 50px; 
+    min-height: 60px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #F6E7E0;
+    border-bottom: 2px solid #684438;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 90px; 
+    height: 90px; 
+    object-fit: contain; 
+    padding: 5px; 
+}
+
+.nav-links ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #684438; 
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 12px; 
+    border-radius: 25px;
+    transition: all 0.3s ease; 
+    background-color: transparent; 
+    border: 2px solid transparent; 
+    white-space: nowrap; 
+}
+
+.nav-button:hover {
+    background-color: #e8a0a0; 
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #e8a0a0;
+}
+
+/* Video Section */
+.home-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #333333; 
+    color: #f0f0f0; 
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1; 
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.3em;
+    color: #e8a0a0; 
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #cccccc; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #e8a0a0; 
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a i {
+    font-size: 1.5em;
+    color: #e8a0a0;
+    transition: color 0.3s ease;
+}
+
+.social-icons a i:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Accessibility Button */
+.accessibility-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e8a0a0, #e08b8b);
+    color: #ffffff;
+    font-size: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: accessibilityFloat 3s ease-in-out infinite;
+}
+
+@keyframes accessibilityFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- Media Queries (Responsiveness) --- */
+
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-header {
+        flex-direction: column; /* לוגו מעל התפריט */
+        align-items: center;
+        padding: 15px 20px;
+    }
+    
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .nav-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .accessibility-float {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        bottom: 15px;
+        left: 15px;
+    }
+}

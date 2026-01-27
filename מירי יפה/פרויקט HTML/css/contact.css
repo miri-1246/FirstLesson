@@ -1,0 +1,78 @@
+/* =========================
+   CONTACT PAGE ONLY
+   ========================= */
+
+
+.contact-main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background-color: #fff5f0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.contact-title {
+    font-size: 30px;
+    color: #a55a6d;
+    margin-bottom: 30px;
+}
+
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    color: #a55a6d;
+    background-color: rgba(255,255,255,0.9);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 2px solid #e8c9b3;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    background-color: #e8a0a0;
+    color: white;
+    border-color: #e8a0a0;
+}
+
+@media (max-width: 768px) {
+    .contact-main {
+        margin: 40px 20px;
+        padding: 30px 20px;
+    }
+
+    .contact-title {
+        font-size: 26px;
+    }
+
+    .contact-method {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-main {
+        margin: 30px 15px;
+        padding: 25px 15px;
+    }
+
+    .contact-title {
+        font-size: 22px;
+    }
+
+    .contact-method {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

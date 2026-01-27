@@ -1,0 +1,121 @@
+/* =========================
+   ACCESSIBILITY PAGE ONLY
+   ========================= */
+
+.accessibility-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px 20px;
+    background-color: #fffaf7;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+}
+
+
+.accessibility-page h1 {
+    font-size: 32px;
+    color: #684438;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.accessibility-page h2 {
+    font-size: 22px;
+    color: #a55a6d;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.accessibility-page p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.accessibility-page ul {
+    padding-right: 20px;
+}
+
+.accessibility-page li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.accessibility-page a {
+    color: #c28b5c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.accessibility-page a:hover {
+    text-decoration: underline;
+}
+
+.accessibility-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .accessibility-page {
+        margin: 40px 15px;
+        padding: 25px 15px;
+    }
+
+    .accessibility-page h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accessibility-content {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+}
+
+.accessibility-float {
+    position: fixed;
+    bottom: 25%;
+    left: 18px;
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(135deg, #a55a6d, #e08b8b);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(165, 90, 109, 0.35),
+                inset 0 2px 6px rgba(255, 255, 255, 0.45);
+    z-index: 9999;
+    animation: accessibilityFloat 3s ease-in-out infinite;
+}
+
+.accessibility-float:hover {
+    animation-play-state: paused;
+    transform: scale(1.12);
+}
+
+@keyframes accessibilityFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .accessibility-float {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+        left: 12px;
+        bottom: 22%;
+    }
+}
